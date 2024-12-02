@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body class="body">
+  </div>
+  <div class="main_page">
+    <h1>Art class registration form</h1>
+    <div class="t_line"></div>
+    <form id="myForm" >
+      <div class="m_input">
+        <h2>Full name</h2>
+        <input type="text" id="f_name" placeholder="Enter full name" required>
+      </div>
+      <div class="m_input">
+        <h2>Guardian's name</h2>
+        <input type="text" id="guardian_name" placeholder="Enter guardians name" required>
+      </div>
+      <div class="m_input">
+        <h2>Phone number</h2>
+        <input type="number" id="p_num" placeholder="Enter phone number" required>
+      </div>
+      <div class="m_input">
+        <h2>Guardian's phone number</h2>
+        <div class="main_put">
+          <input type="number" id="guardian_number" placeholder="Enter guardian's phone number" required>
+        </div>
+      </div>
+      <div class="m_input">
+        <h2>Email</h2>
+        <input type="email" id="email" placeholder="Enter email" required>
+      </div>
+      <div class="m_input">
+        <h2>Age</h2>
+        <input type="number" id="age" placeholder="Enter age" required>
+        <p id="minorNote" class="hidden">* Minor, guardian details required.</p>
+      </div>
+      <div class="m_input">
+        <h2>Class type</h2>
+        <div class="main_put">
+          <select id="class_type" class="select" required>
+            <option value="">Choose class type</option>
+            <option value="Painting">Painting</option>
+            <option value="Drawing">Drawing</option>
+            <option value="Potery">Potery</option>
+            <option value="Grafiti">Grafiti</option>
+            <option value="Sculpting">Sculpting</option>
+          </select>
+          <p id=slots_full></p>
+        </div>
+      </div>
+      <div class="m_input">
+        <h2>Class days</h2>
+        <div class="main_put">
+          <select id="class_day" class="select" required>
+            <option value="">Select an option</option>
+            <option value="Mondys to Fridays">Mondy-Friday</option>
+            <option value="Weekends">Weekends</option>
+          </select>
+        </div>
+      </div>
+      <div class="m_input">
+        <h2>Class time</h2>
+        <div class="main_put">
+          <select id="class_time" class="select" required>
+            <option value="">Select class time</option>
+            <option value="9:00am to 12:00pm">9:00am to 12:00pm</option>
+            <option value="12:00pm to 3:00pm">12:00pm to 3:00pm</option>
+          </select>
+        </div>
+      </div>
+      <button id="submit">Submit</button>
+    </form>
+    <div id="summary" class="hidden">
+      <h2>Booking Summary</h2>
+      <p id="summaryDetails"></p>
+      <h2 id="cost"></h2>
+  </div>
+  </div>
+  <script src="script/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- REQUIRED -->
