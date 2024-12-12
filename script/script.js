@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let summary = document.getElementById('summary');
   let main_summary= document.getElementById('summaryDetails');
   let cost = document.getElementById('cost');
-  let slots_full = document.getElementById('slots_full')
-  slots_full.classList.add('full_slots')
+  // let slots_full = document.getElementById('slots_full')
+  // slots_full.classList.add('full_slots')
 
   
   myForm.addEventListener('submit', (e) => {
@@ -18,6 +18,115 @@ document.addEventListener("DOMContentLoaded", () => {
     let class_type = document.getElementById('class_type').value
     let class_day = document.getElementById('class_day').value
     let class_time = document.getElementById('class_time').value
+
+    let fullName_err = document.getElementById('fullName_err')
+    let guardiansName_err = document.getElementById('guardiansName_err')
+    let phoneNumber_err = document.getElementById('phoneNumber_err')
+    let guardianPhoneNumber_err = document.getElementById('guardianPhoneNumber_err')
+    let email_err = document.getElementById('email_err')
+    let age_err = document.getElementById('age_err')
+    let classType_err = document.getElementById('classType_err')
+    let classDay_err = document.getElementById('classDay_err')
+    let classTime_err = document.getElementById('classTime_err')
+    let submit_err = document.getElementById('submit_err')
+    let regEx = /^[a-zA-Z0-9_.±]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/
+    let isValid = true
+
+    if (f_name === ""){
+      fullName_err.textContent = 'Full name is required'
+      isValid = false
+    }else if(f_name.length <= 6){
+      fullName_err.textContent = 'Please input full name'
+      isValid = false
+    }else{
+      fullName_err.textContent = '' 
+      isValid = true
+    } 
+
+    if (guardian_name === "" && age < 18){
+      guardiansName_err.textContent = 'Full name of guardian is required'
+      isValid = false
+    }else if(f_name.length <= 6 && age < 18){
+      guardiansName_err.textContent = 'Full name of guardian is required'
+      isValid = false
+    }else{
+      guardiansName_err.textContent = '' 
+      isValid = true
+    } 
+
+    if (p_num === ''){
+      phoneNumber_err.textContent = 'Phone number is required'
+      isValid = false
+    }else if(p_num.length <= 6){
+      phoneNumber_err.textContent = 'Enter a valid phone number'
+      isValid = false
+    }else{
+      phoneNumber_err.textContent = ""
+      isValid = true
+    }
+
+    if (guardian_number === '' && age < 18){
+      guardianPhoneNumber_err.textContent = 'Phone number is required'
+      isValid = false
+    }else if(guardian_number.length <= 6 && age <18){
+      guardianPhoneNumber_err.textContent = 'Enter a valid phone number'
+      isValid = false
+    }else{
+      guardianPhoneNumber_err.textContent = ""
+      isValid = true
+    }
+
+    if(email === ''){
+      email_err.textContent = 'Email adress is repuired'
+      isValid = false
+    }else if(!regEx.test(email)){
+      email_err.textContent = 'invalid email format'
+      isValid = false
+    }else{
+      email_err.textContent = ''
+      isValid = true
+    }
+
+    if (age === ''){
+      age_err.textContent = 'Age is required'
+      isValid = false
+    }else {
+      age_err.textContent = ''
+      isValid = true
+    }
+
+    if(class_type === ''){
+      classType_err.textContent = 'Choose class type'
+      isValid = false
+    }else{
+      classType_err.textContent = ''
+      isValid = true
+    }
+
+    if(class_day === ''){
+      classDay_err.textContent = 'Pick available days'
+      isValid = false
+    }else{
+      classDay_err.textContent = ''
+      isValid = true
+    }
+
+    if(class_time === ''){
+      classTime_err.textContent = 'Choose class time'
+      isValid = false
+    }else{
+      classTime_err.textContent = ''
+      isValid = true
+    }
+
+    if(isValid = true && f_name !=''&& age.length >= 18 && p_num !='' && email !='' && age !='' && class_time !='' && class_type !='' && class_day !=''){
+
+    }else if(isValid = true && f_name !='' && guardian_name !='' && guardian_number !=''&& age.length < 18 && p_num !='' && email !='' && age !='' && class_time !='' && class_type !='' && class_day !=''){
+
+    }else{
+      submit_err.textContent = 'Unaible to register'
+      return
+    }
     
     
     

@@ -350,12 +350,20 @@ footer{
 
 .m_input{
   width: 50%;
+  height: 150px;
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   text-align: left;
   align-content: center;
+}
+
+.error{
+  width: 300px;
+  background-color: red;
+  color: white;
+  padding: 0px 5px;
 }
 
 .main_put{

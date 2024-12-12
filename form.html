@@ -14,66 +14,75 @@
     <form id="myForm" >
       <div class="m_input">
         <h2>Full name</h2>
-        <input type="text" id="f_name" placeholder="Enter full name" required>
+        <input type="text" id="f_name" placeholder="Enter full name">
+        <p id="fullName_err" class="error"></p>
       </div>
       <div class="m_input">
         <h2>Guardian's name</h2>
-        <input type="text" id="guardian_name" placeholder="Enter guardians name" required>
+        <input type="text" id="guardian_name" placeholder="Enter guardians name">
+        <p id="guardiansName_err" class="error"></p>
       </div>
       <div class="m_input">
         <h2>Phone number</h2>
-        <input type="number" id="p_num" placeholder="Enter phone number" required>
+        <input type="number" id="p_num" placeholder="Enter phone number">
+        <p id="phoneNumber_err" class="error"></p>
       </div>
       <div class="m_input">
         <h2>Guardian's phone number</h2>
         <div class="main_put">
-          <input type="number" id="guardian_number" placeholder="Enter guardian's phone number" required>
+          <input type="number" id="guardian_number" placeholder="Enter guardian's phone number">
+          <p id="guardianPhoneNumber_err" class="error"></p>
         </div>
       </div>
       <div class="m_input">
         <h2>Email</h2>
-        <input type="email" id="email" placeholder="Enter email" required>
+        <input type="text" id="email" placeholder="Enter email" >
+        <p id="email_err" class="error"></p>
       </div>
       <div class="m_input">
         <h2>Age</h2>
-        <input type="number" id="age" placeholder="Enter age" required>
+        <input type="number" id="age" placeholder="Enter age" >
         <p id="minorNote" class="hidden">* Minor, guardian details required.</p>
+        <p id="age_err" class="error"></p>
       </div>
       <div class="m_input">
         <h2>Class type</h2>
         <div class="main_put">
-          <select id="class_type" class="select" required>
-            <option value="">Choose class type</option>
+          <select id="class_type" class="select">
+            <option value="">Select an option</option>
             <option value="Painting">Painting</option>
             <option value="Drawing">Drawing</option>
             <option value="Potery">Potery</option>
             <option value="Grafiti">Grafiti</option>
             <option value="Sculpting">Sculpting</option>
           </select>
-          <p id=slots_full></p>
+          <p id="classType_err" class="error"></p>
         </div>
       </div>
       <div class="m_input">
         <h2>Class days</h2>
         <div class="main_put">
-          <select id="class_day" class="select" required>
+          <select id="class_day" class="select">
             <option value="">Select an option</option>
             <option value="Mondys to Fridays">Mondy-Friday</option>
             <option value="Weekends">Weekends</option>
           </select>
+          <p id="classDay_err" class="error"></p>
         </div>
       </div>
       <div class="m_input">
         <h2>Class time</h2>
         <div class="main_put">
-          <select id="class_time" class="select" required>
-            <option value="">Select class time</option>
+          <select id="class_time" class="select" >
+            <option value="">Select an option</option>
             <option value="9:00am to 12:00pm">9:00am to 12:00pm</option>
             <option value="12:00pm to 3:00pm">12:00pm to 3:00pm</option>
           </select>
+          <p id="classTime_err" class="error"></p>
         </div>
       </div>
       <button id="submit">Submit</button>
+      <h2 id="submit_err"></h2>
     </form>
     <div id="summary" class="hidden">
       <h2>Booking Summary</h2>
